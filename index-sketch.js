@@ -1,15 +1,9 @@
-let navBtns = {};
-
-
+let cb;
 function setup() {
   // put setup code here
   createCanvas(800,600);
-  navBtns.data = createButton('Data Structures');
-
-  navBtns.sorting = createButton('Sorting Algorithms');
-  navBtns.sorting.mouseReleased(goToPage);
-  navBtns.search = createButton('Search Algorithms');
-  navBtns.daily = createButton('Daily Coding Problems');
+  createNavBtns();
+  cb = new CodeBlock();
 }
 
 function draw() {
@@ -18,6 +12,5 @@ function draw() {
 }
 
 let goToPage = function(path) {
-	console.log('here');
-	//location.href='http://google.com';
+	location.href=path;
 }

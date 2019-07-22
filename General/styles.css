@@ -29,3 +29,15 @@ canvas {
 	display: block;
 	margin: auto;
 }
+.nav {
+	background: #aaa;
+	padding: 10px;
+}
+.code-block {
+	width:800px;
+	height:600px;
+	background: #222;
+	position: fixed;
+	margin: auto;
+	top: 100px;
+}
