@@ -20,3 +20,20 @@ function createNavBtns() {
 	navBtns.daily.mouseReleased(function(){goToPage("/Daily-Coding-Problems/index.html")});
 	navBtns.daily.parent(navBtns.div);
 }
+
+
+let goToPage = function(path) {
+	location.href=path;
+}
+
+
+function windowResized() {
+	let x = (windowWidth * 0.4375) / 800;
+	let xx = -((1-x)*800)/2;
+	let h = windowHeight - 50; //TODO fix to correct number when css nav btns
+	let y = (h * 0.45) / 600;
+	let yy = -((1-y)*600)/2;
+	console.log(y + ' vs ' + yy);
+	let c = select("#defaultCanvas0");
+    c.style('transform', "translate("+xx+"px, "+yy+"px)scale("+x+"," + y + ")");
+}
