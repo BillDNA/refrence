@@ -19,7 +19,9 @@ let goToPage = function(path) {
 function windowResized() {
 	let x = (windowWidth * 0.4375) / 800;
 	let xx = -((1-x)*800)/2;
-	let h = windowHeight - 41; //TODO fix to correct number when css nav btns
-	console.log(x + ' vs ' + xx);
-    c.style('transform', "translate("+xx+"px, 0px)scale("+x+"," + 1 + ")");
+	let h = windowHeight - 50; //TODO fix to correct number when css nav btns
+	let y = (h * 0.45) / 600;
+	let yy = -((1-y)*600)/2;
+	console.log(y + ' vs ' + yy);
+    c.style('transform', "translate("+xx+"px, "+yy+"px)scale("+x+"," + y + ")");
 }
