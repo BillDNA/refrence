@@ -27,11 +27,12 @@ let goToPage = function(path) {
 }
 
 
-function windowResized() {
+function windowResized() { //TODO move to its own file
+	let s = 0.65;
 	let x = (windowWidth * 0.4375) / 800;
 	let xx = -((1-x)*800)/2;
 	let h = windowHeight - 50; //TODO fix to correct number when css nav btns
-	let y = (h * 0.45) / 600;
+	let y = (h * s) / 600;
 	let yy = -((1-y)*600)/2;
 	console.log(y + ' vs ' + yy);
 	let c = select("#defaultCanvas0");

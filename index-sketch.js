@@ -5,6 +5,7 @@ function setup() {
   c.parent(select('#canvas-container'));
   createNavBtns();
   cb = new CodeBlock();
+  windowResized();
 }
 
 function draw() {

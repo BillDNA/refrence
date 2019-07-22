@@ -16,13 +16,16 @@ canvas {
 	padding: 10px;
 	height:30px;
 }
+:root {
+  --section-height: 0.65; 
+}
 #words-container {
 	width: 90%;
 	position: fixed;
-	height:calc((100vh - 50px) * 0.45);
+	height:calc((100vh - 50px) * (0.9 - var(--section-height)));
 	background: #222;
 	margin:auto;
-	top: calc(2.5% + 50px);
+	top: calc(((100vh - 50px)*0.025) + 50px);
 	left: 5%;
 	color:#bbb;
 }
@@ -30,7 +33,7 @@ canvas {
 	width: 43.75%;
 	left: 5%;
 	bottom: 5%;
-	height: calc((100vh - 50px) * 0.45);
+	height: calc((100vh - 50px) * var(--section-height));
 	background: #f00;
 	position: fixed;
 	margin: auto;
@@ -39,7 +42,7 @@ canvas {
 	width: 43.75%;
 	right: 5%;
 	bottom: 5%;
-	height: calc((100vh - 50px) *0.45);
+	height: calc((100vh - 50px) * var(--section-height));
 	background: #222;
 	position: fixed;
 	margin: auto;
