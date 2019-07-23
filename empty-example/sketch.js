@@ -1,6 +1,11 @@
+let cb;
 function setup() {
   // put setup code here
-  createCanvas(800,600);
+  let c = createCanvas(800,600);
+  c.parent(select('#canvas-container'));
+  createNavBtns();
+  cb = new CodeBlock();
+  windowResized();
 }
 
 function draw() {

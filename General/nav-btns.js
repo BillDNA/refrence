@@ -4,6 +4,10 @@ function createNavBtns() {
 	navBtns.div = createDiv();
 	navBtns.div.addClass('nav');
 //Data
+	navBtns.home = createButton('Home');
+	navBtns.home.mouseReleased(function(){goToPage("/index.html")});
+	navBtns.home.parent(navBtns.div);
+//Data
 	navBtns.data = createButton('Data Structures');
 	navBtns.data.mouseReleased(function(){goToPage("/Data-Structures/index.html")});
 	navBtns.data.parent(navBtns.div);
