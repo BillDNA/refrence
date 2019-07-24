@@ -33,16 +33,24 @@ class CodeBlock {
 		this.code.addClass('language-javascript')
 		this.code.parent(this.pre);
 		//now add the lines
+		this._lines = [];
+		let code_text = "";
 		if(json.code !== undefined) {
 			for(let i = 0; i < json.code.length; i++) {
-				let span = createElement('span',json.code[i].txt + "\n");
-				span.parent(this.code);
+				this._lines.push(new CodeLine(json.code[i]));
+				code_text = code_text + this.line(i).txt + "\n";
 			}
 		}
-		Prism.highlightElement(this.code.elt);
+		this.code.html(code_text);
+
+		//Now Add Buttons top
+
+		//Prism.highlightElement(this.code.elt);
 	}
 	//------------------------------------------------------------- Getters and Setters
 
 	//------------------------------------------------------------- helpers
-
+	line(number) {
+		return this._lines[number];
+	}
 }
